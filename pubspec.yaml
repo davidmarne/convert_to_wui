@@ -1,12 +1,12 @@
 name: convert_to_wui
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/davidmarne/convert_to_wui
 author: David Marne <davemarne@gmail.com>
 description: A tool for converting html files to wui_builder functions
 
 dependencies:
-  html: ^0.13.2
-  dart_style: '>=0.2.4 <2.0.0'
+  html: ^0.13.3
+  dart_style: "1.2.3 <2.0.0"
 
 environment:
-  sdk: ">=1.23.0 <2.0.0"
+  sdk: ">=2.1.0 <3.0.0"

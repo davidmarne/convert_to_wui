@@ -28,7 +28,7 @@ void _convert(String filename) {
   for (final child in content.body.children) {
     i++;
     result
-      ..write('VNode geratedElement$i() =>')
+      ..write('VNode generatedElement$i() =>')
       ..write(_writeElement(child))
       ..write(';\n\n');
   }
@@ -49,12 +49,12 @@ String _writeElement(Element element) {
   if (element.children.isNotEmpty)
     result.write('..children = [${_writeElements(element.children)}]');
   else if (element.text != null && element.text != '')
-    result.write('..text = \'${element.text}\'');
+    result.write('..text = \'${element.text.trim()}\'');
   return result.toString();
 }
 
 String _sanitizeAttributeSpan(String span) =>
-    span.replaceFirst('class', 'className');
+    span.replaceFirst('class', 'className').replaceAll('-', '');
 
 String _sanitizeTag(String span) => span.replaceFirst('-', '');
 
